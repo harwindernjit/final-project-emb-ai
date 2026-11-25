@@ -4,9 +4,8 @@ from EmotionDetection.emotion_detection import emotion_detector
 
 app = Flask("Emotion Detector")
 
-
 @app.route("/emotionDetector")
-def emotionDetector():
+def emotion_detect():
     """Analyze the submitted text and return a formatted response."""
     text_to_evaluate = request.args.get("textToAnalyze")
     result = emotion_detector(text_to_evaluate)
